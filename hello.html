@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Hello</title>
+    </head>
+    <body>
+        <div id="title">
+            <h1>{{ message.greeting }}
+                {{ message.name }}</h1>
+            <a v-bind:href='address'>Naver</a>
+            <p v-if="age>=20 && age>12">Adult</p>
+            <p v-else-if="age<=20 && age>12">Teen ager</p>
+            <p v-else="v-else">Kid</p>
+            <div v-for="(todo, index) in todos">
+                <p>{{ index }}
+                    :
+                    {{ todo.text }}</p>
+                    
+            </div>
+            <div v-for="(value, name) in user">
+                <p>{{ name }} - {{ value }}</p>
+                
+            </div>
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+        <script src="./hello.js"></script>
+    </body>
+</html>
