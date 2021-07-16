@@ -51,6 +51,20 @@
             <input v-model.lazy='value4'>
             <p>{{ value4 }}</p>
         </div>
+        <div id="app">
+            <input v-model.trim='message'>
+            <p>{{ message }}</p>
+            <p>{{ user_info }}</p>
+            <input v-model.number='age'>
+            <p>{{ age_message }}</p>
+            <hello name="mirai"></hello>
+            <hello name="noa"></hello>
+            <local-hello></local-hello>
+            <h3>{{ totalCount }}</h3>
+            <add @event-add="updateTotal"></add><br>
+            <add @event-add="updateTotal"></add><br>
+            <add @event-add="updateTotal"></add><br>
+        </div>
         <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
         <script src="./hello.js"></script>
     </body>
