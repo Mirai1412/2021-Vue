@@ -34,29 +34,29 @@ Vue.component('comments', {
         }
     }
 
-}); //전역변수
+});
 
-// let text = new Vue({
-//     el: '#text',
-//     data: {
-//         user: null,
-//         comment: null,
-//         messages: []
-//     },
-//     methods: {
-//         save() {
+let text = new Vue({
+    el: '#text',
+    data: {
+        // user: null,
+        // comment: null,
+        // messages: []
+    },
+    methods: {
+        // save() {
 
-//             const message = {
-//                 user: this.user,
-//                 comment: this.comment
-//             };
+        //     const message = {
+        //         user: this.user,
+        //         comment: this.comment
+        //     };
 
-//             this
-//                 .messages
-//                 .unshift(message)
-//             this.user = null
-//             this.comment = null
-//         }
-//     }
+        //     this
+        //         .messages
+        //         .unshift(message)
+        //     this.user = null
+        //     this.comment = null
+        // }
+    }
 
-// });
+});
