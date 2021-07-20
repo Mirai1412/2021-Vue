@@ -1,0 +1,70 @@
+v-bind:href ==> :href
+v-bind:src==> :src
+
+v-on:click==> @click
+
+node.js
+
+a.js
+export value =10;
+export value2 =10;
+
+b.js
+import {value, value2} from './a.js' //불러오기가 가능하다
+
+export default  {value:10} -> import value from './a.js'
+
+module.exports.value=10;
+exports.value=10;               -> const a = require('./a.jsss')
+
+HTTP protocol
+기본 80번 포트 
+주소는 http://로 시작되는 주소를 사용한다.
+
+http 특징 
+1회성이다. 요청하고 응답하면 끝난다.
+
+클라이언트 Request-> 서버
+클라이언트 <-Response 서버
+
+Request
+클라이언트가 서버로 보내는 요청. 다음 정보를 포함한다.
+get : 조회
+post : 신규리소스등록 -body 사용가능
+put : 수정-body 사용가능
+delete : 삭제
+Body: 데이터
+Header:보안,브라우저 정보 등의 정보 content-type도 같이날아간다.
+등을 사용
+
+Response
+서버의 응답 다음 정보를 포함한다.
+200:성공 404:리소스를 찾을 수 없다. 양식이 맞지않다.
+Body: 데이터
+Header:content-type, content-encoding
+서버는 html을 text로 응답하고 웹 브라우저가 이를 그리는 것
+
+npm init -> package.json 파일 생성
+
+npm install -> package.json 파일에 있는 의존성 라이브러리들을 모두 다운
+npm install <module> 현재 프로젝트에 해당 라이브러리 파일 다운 // 이 라이브러리를 쓸지말지 긴가민가할대 사용 -잘안씀
+npm install --save <module> -> package.json에 정보 추가하고 다운 // 팀원들과 공유할때 사용
+npm install -D <module> -> package.json에 개발용 라이브러리로 정보 추가하고 다운 //컴파일 할때만사용하고 최종결과물에서는 쓰지않는다.  
+npm install -g <module> -> 전체 시스템에서 사용할 수 있도록 라이브러리 설치
+npm uninstall <module> -> 설치 삭제
+
+Babel 
+ES6 이상의 자바코드를 옛날 문법으로 바꾼후 보낸다 -브라우저 호환성을 위해 사용
+
+Webpack
+HTML head 부분의 링크와 스크립트등을 전부 엮어서 하나의 파일로 만들어준다.
+
+Babel
+npm install -D @babel/core @babel/cli //환경설정을 미리만듬
+npm install -D @babel/preset-env //환경설정 프리셋
+//나중에 Vue가 다해줌
+
+package.json 수정
+  "scripts": {
+    "build": "babel src/js -w -d dist/js"   //npm run build 치면 실행된다.
+  },
