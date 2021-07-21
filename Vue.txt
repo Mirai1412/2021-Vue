@@ -68,3 +68,25 @@ package.json 수정
   "scripts": {
     "build": "babel src/js -w -d dist/js"   //npm run build 치면 실행된다.
   },
+
+  Webpack 설치
+• npm install -D webpack webpack-cli
+• npm install -D babel-loader
+
+vue-cli // 터미널로 뷰를 생성하게해준다
+npm install -g @vue/cli //뷰 설치
+vue create hello-vue // 현재폴더에 hello-vue 파일이 생성
+
+npm run serve 서버열기
+
+src 동적인 작업을 하기위한 곳
+public 건드릴 일이 거의 없다.
+
+baseUrl  주소를 바꾸고 싶을때
+기본주소 http://localhost:8080/
+현재 옵션 보기: vue inspect > options.js
+
+<%= BASE_URL %>파일이름 // 현재 폴더의 절대경로 생성
+
+main.js -> index.html 에 전송된다.
+components // 세부 작업

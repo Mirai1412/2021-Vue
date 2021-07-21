@@ -9,7 +9,7 @@ Vue.component('product', {
       <div class="product-info">
           <h1>{{ title }}</h1>
           <p v-if="inStock">In Stock</p>
-          <p v-else="v-else">Out of Stock</p>
+          <p v-else>Out of Stock</p>
           <ul>
               <li v-for="detail in details">{{ detail }}</li>
           </ul>
