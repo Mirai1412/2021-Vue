@@ -5,7 +5,7 @@
         </div>
         <div class="product-info">
             <h1>{{ product }}</h1>
-            <p v-if="inStock">누가 자꾸 해킹함</p>
+            <p v-if="inStock">In Stock</p>
             <p v-else>Out of Stock</p>
             <p>Shipping:
                 {{ shipping }}</p>
@@ -31,18 +31,18 @@
     export default {
         data() {
             return {
-                product: 'Cat',
-                brand: 'Vue',
+                product: 'Socks',
+                brand: 'Vue Mastery',
                 selectedVariant: 0,
                 details: [
-                    '80% 노력', '19% 상상', '1% 해킹력', '그것이 바로 꿈'
+                    '80% cotton', '20% polyester', 'Gender-neutral'
                 ],
                 variants: [
                     {
                         variantId: 2234,
                         variantColor: 'green',
                         variantImage: require('@/assets/images/socks_green.jpg'),
-                        variantQuantity: 0
+                        variantQuantity: 10
                     }, {
                         variantId: 2235,
                         variantColor: 'blue',
