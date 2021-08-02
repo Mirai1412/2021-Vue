@@ -7,7 +7,7 @@
 </template>
 <script>
     export default {
-        name: 'Evemts',
+        name: 'Events',
         props: [
             'event_id', 'query_id'
         ],
@@ -25,7 +25,7 @@
             if (this.query_id) {
                 return '2+1'
             } else 
-                return '1'
+                return ''
         }
 
     }
