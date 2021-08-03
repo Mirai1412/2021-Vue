@@ -24,7 +24,7 @@ export default{
         },
         data(){
             return {
-                menus:[{id:1, name="a", price:1000},
+                menus:[{id:1, name:"a", price:1000},
                 ]
             }
         }
