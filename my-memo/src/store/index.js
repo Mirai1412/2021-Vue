@@ -24,11 +24,16 @@ export default new Vuex.Store({
             localStorage.removeItem('accessToken')
             location.reload();
         },
+        loginFailed(state){
+            state.accessToken = null
+            localStorage.removeItem('accessToken')
+            location.reload();
+        },
         getAccessToken(state){
             state.accessToken = localStorage.getItem('accessToken')
         }  
     },
-    action:{
+    actions:{
         signin({ commit },payload){
             const data = {userid:payload.userid, password:payload.password}
             return axios.post('/api/auth/login', data)
@@ -37,8 +42,9 @@ export default new Vuex.Store({
                     commit('siginin',{accessToken:Response.data.token})
                 }
             })
-            .catch(()=>{
-                commit('signin')
+            .catch((error)=>{
+                commit('loginFailed')
+                 return Promise.reject(error)
             })
             }
         }   

@@ -23,6 +23,19 @@ import memoApi from '../apis/memos'
             },
             addMemo(){
                 const data = new FormData();
+                data.append('title',this.title);
+                data.append('content',this.content)
+                data.append('file',this.file)
+
+                memoApi.addMemo(data)
+                    .then(Response=>{
+                        console.log(Response.status)
+                        this.$route.push('/')
+                    })
+                .catch(error=>{
+                    console.log(error) 
+                    this.$route.push('/')
+                })
             }
         }
     }
